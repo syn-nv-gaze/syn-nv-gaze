@@ -258,31 +258,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+           Despite recent advances in appearance-based gaze estimation techniques,
+           the need for training data that covers the target head pose and gaze distribution 
+           remains a crucial challenge for practical deployment. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+           This work examines a novel approach for synthesizing gaze estimation training data 
+           based on monocular 3D face reconstruction. 
+           Unlike prior works using multi-view reconstruction, photo-realistic CG models, 
+           or generative neural networks, our approach can manipulate and extend the head 
+           pose range of existing training data without any additional requirements. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We introduce a projective matching procedure to align the reconstructed 3D facial mesh 
+            with the camera coordinate system and synthesize face images with accurate gaze labels. 
+            We also propose a mask-guided gaze estimation model and data augmentation strategies 
+            to further improve the estimation accuracy by taking advantage of synthetic training data. 
+            Experiments using multiple public datasets show that our approach significantly 
+            improves the estimation performance on challenging cross-dataset settings with non-overlapping gaze distributions.
           </p>
         </div>
       </div>
@@ -290,15 +283,17 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+  
+<!--     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
+   -->
     <!--/ Paper video. -->
   </div>
 </section>
